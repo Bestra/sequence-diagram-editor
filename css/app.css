@@ -1,0 +1,22 @@
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#title {
+  padding-bottom: 30px;
+}
+
+#editor {
+  flex: 0 1 50%;
+  padding-bottom: 30px;
+}
+
+#diagram {
+  flex: 1 0 auto;
+}
+
+#templates {
+  display: none;
+}
