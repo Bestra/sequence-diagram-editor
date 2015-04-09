@@ -3,7 +3,7 @@ $(function() {
   var $title = $("#title input");
   var $diagram = $("#diagram");
   var $newDiagramButton = $("#new-diagram");
-  var $editor = $('#editor textarea');
+  var $editor = $('#editor');
   var $savedDiagrams = $("#saved-diagrams");
   var $savedDiagramTemplate = $('#templates .saved-diagram');
   var $sampleDiagramTemplate = $('#templates .sample-diagram pre');
@@ -22,7 +22,7 @@ $(function() {
       var existing = window.localStorage[title];
       window.localStorage[title] = $editor.val();
       if(!existing) {
-        addSavedItemToList (title);
+        addSavedItemToList(title);
       }
     }
   };

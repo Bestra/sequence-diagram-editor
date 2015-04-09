@@ -5,18 +5,20 @@
   </head>
 
   <body>
-    <main>
-      <h1>Sequence Diagram Editor</h1>
+    <nav>
+      <a href="#" id="new-diagram">New</a>
       <ul id='saved-diagrams'>
       </ul>
-      <a href="#" id="new-diagram">New</a>
+    </nav>
+    <main>
+      <h1>Sequence Diagram Editor</h1>
 
       <div id='title'>
         <input name="title" placeholder="Title"/>
       </div>
 
-      <div id="editor">
-        <textarea rows="20" cols="72">
+      <div>
+        <textarea id="editor" rows="20" cols="72">
         </textarea>
       </div>
       <div id="diagram"></div>

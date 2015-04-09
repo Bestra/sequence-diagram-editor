@@ -4,6 +4,12 @@ main {
   align-items: center;
 }
 
+nav {
+  width: 300px;
+  z-index: 10;
+  position: absolute;
+}
+
 #title {
   padding-bottom: 30px;
 }
@@ -11,6 +17,8 @@ main {
 #editor {
   flex: 0 1 50%;
   padding-bottom: 30px;
+  font-family: monospace;
+  font-size: 1.1rem;
 }
 
 #diagram {
@@ -19,4 +27,16 @@ main {
 
 #templates {
   display: none;
+}
+
+#new-diagram {
+  margin: 20px;
+}
+
+#saved-diagrams {
+}
+
+.saved-diagram {
+  display: flex;
+  justify-content: space-between;
 }
