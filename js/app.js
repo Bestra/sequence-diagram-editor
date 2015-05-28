@@ -11,8 +11,15 @@ $(function() {
 
   var updateDiagram = function(event) {
     var seqDesc = $editor.val();
-    $diagram.empty();
-    Diagram.parse(seqDesc).drawSVG('diagram', { theme: 'simple' });
+    try {
+      var parsed = Diagram.parse(seqDesc);
+      $diagram.empty();
+      parsed.drawSVG('diagram', { theme: 'simple' });
+      $editor.removeClass('compile-error');
+    } catch(e) {
+      $editor.addClass('compile-error');
+      console.log("parse error");
+    }
     saveDiagram();
   };
 
@@ -99,8 +106,8 @@ $(function() {
   $newDiagramButton.on('click', blankDiagram);
   $savedDiagrams.on('click', '.remove-saved-item', removeSavedItem);
   $savedDiagrams.on('click', '.name', switchToSavedItem);
-  $title.on('keyup', _.debounce(changeDiagramName, 500));
-  $editor.on('keyup', _.debounce(updateDiagram, 500));
+  $title.on('keyup', _.debounce(changeDiagramName, 800));
+  $editor.on('keyup', _.debounce(updateDiagram, 800));
   updateDiagram();
 
 });

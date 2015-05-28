@@ -21,6 +21,10 @@ nav {
   font-size: 1.1rem;
 }
 
+#editor.compile-error {
+  background-color: hsl(0,100%,90%);
+}
+
 #diagram {
   flex: 1 0 auto;
 }
